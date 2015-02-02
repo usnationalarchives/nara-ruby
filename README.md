@@ -1,6 +1,6 @@
 # nara-ruby
 
-A Ruby client for the {National Archives API}[https://github.com/usnationalarchives/Catalog-API].
+A Ruby client for the [National Archives API](https://github.com/usnationalarchives/Catalog-API).
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself:
 
 ## Usage
 
-There are many options and search criteria that can be used. The best way to learn about them is by exploring the {interactive documentation}[https://catalog.archives.gov/interactivedocumentation] and other {provided documentation}[https://github.com/usnationalarchives/Catalog-API/blob/master/search_and_export.md]. The basic usage is as follows.
+There are many options and search criteria that can be used. The best way to learn about them is by exploring the [interactive documentation](https://catalog.archives.gov/interactivedocumentation) and other [provided documentation](https://github.com/usnationalarchives/Catalog-API/blob/master/search_and_export.md). The basic usage is as follows.
 
 Search for a record by keyword using pagination:
 
