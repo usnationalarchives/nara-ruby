@@ -1,0 +1,17 @@
+﻿{
+  "name": "NARA Catalog Ruby Client",
+  "description": "Ruby client for the National Archives Catalog API",
+  "license": "https://github.com/usnationalarchives/nara-ruby/blob/master/LICENSE.txt",
+  "openSourceProject": 1,
+  "governmentWideReuseProject": 1,
+  "tags": [
+    "NARA",
+    "api",
+    "catalog",
+    "records",
+    "Ruby"
+  ],
+  "contact": {
+    "email": "leslie.johnston@nara.gov"
+  }
+}
