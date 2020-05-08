@@ -11,16 +11,16 @@ module Nara
 
     private
 
-    def self.search_records(params)
+    def search_records(params)
       path = version
       result = fetch(path, params)    
       result['opaResponse']['results']['result']
     end
 
-    def self.version; "v1" end
-    def self.base_url; "https://catalog.archives.gov/api" end
+    def version; "v1" end
+    def base_url; "https://catalog.archives.gov/api" end
 
-    def self.faraday
+    def faraday
       Faraday.new(
         base_url,
         headers: {:user_agent => "nara-ruby (Faraday v#{Faraday::VERSION})", :accept => 'application/json'}
@@ -30,13 +30,13 @@ module Nara
       end
     end
 
-    def self.fetch(path, params={})    
+    def fetch(path, params={})    
       params = {:action => "search"}.merge(params)
       response = faraday.get(path, params)
       
       if response.success?
         if response.headers['content-type'] =~ /json/
-          parsed = JSON.parse(response.body)
+          JSON.parse(response.body)
         else
           raise ApiError.new("Response is not JSON: #{response.body}")
         end
