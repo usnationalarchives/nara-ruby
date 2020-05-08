@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "codeinventory.json",
-    "lib/.DS_Store",
     "lib/nara-ruby.rb",
     "lib/nara.rb",
     "lib/nara/records.rb",
