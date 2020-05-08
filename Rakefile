@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   gem.name = "nara"
   gem.homepage = "http://github.com/usnationalarchives/nara-ruby"
-  gem.license = "CC0 1.0"
+  gem.license = "CC0-1.0"
   gem.summary = %Q{A Ruby gem for communicating with the National Archives API}
   gem.description = %Q{Get metadata from the National Archives API}
   gem.email = "davidnaffis@gmail.com"
