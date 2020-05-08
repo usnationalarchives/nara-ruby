@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["David Naffis".freeze]
-  s.date = "2020-05-07"
+  s.date = "2020-05-08"
   s.description = "Get metadata from the National Archives API".freeze
   s.email = "davidnaffis@gmail.com".freeze
   s.extra_rdoc_files = [
@@ -25,13 +25,19 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "codeinventory.json",
+    "lib/.DS_Store",
     "lib/nara-ruby.rb",
     "lib/nara.rb",
     "lib/nara/records.rb",
-    "nara.gemspec"
+    "nara.gemspec",
+    "test/test_base_url.rb",
+    "test/test_faraday.rb",
+    "test/test_fetch.rb",
+    "test/test_search.rb",
+    "test/test_version.rb"
   ]
   s.homepage = "http://github.com/usnationalarchives/nara-ruby".freeze
-  s.licenses = ["CC0 1.0".freeze]
+  s.licenses = ["CC0-1.0".freeze]
   s.rubygems_version = "2.7.6.2".freeze
   s.summary = "A Ruby gem for communicating with the National Archives API".freeze
 
@@ -39,33 +45,33 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<hashie>.freeze, [">= 1.2.0"])
-      s.add_runtime_dependency(%q<faraday>.freeze, [">= 0.8.1"])
-      s.add_runtime_dependency(%q<json>.freeze, [">= 1.7.0"])
+      s.add_runtime_dependency(%q<hashie>.freeze, ["~> 1.2"])
+      s.add_runtime_dependency(%q<faraday>.freeze, ["~> 0.8"])
+      s.add_runtime_dependency(%q<json>.freeze, ["~> 1.7"])
       s.add_development_dependency(%q<rdoc>.freeze, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>.freeze, ["~> 1.0"])
-      s.add_development_dependency(%q<jeweler>.freeze, ["~> 2.3.9"])
-      s.add_development_dependency(%q<minitest>.freeze, [">= 0"])
-      s.add_development_dependency(%q<mocha>.freeze, [">= 0"])
+      s.add_development_dependency(%q<jeweler>.freeze, ["~> 2.3"])
+      s.add_development_dependency(%q<minitest>.freeze, ["~> 5.0"])
+      s.add_development_dependency(%q<mocha>.freeze, ["~> 1.0"])
     else
-      s.add_dependency(%q<hashie>.freeze, [">= 1.2.0"])
-      s.add_dependency(%q<faraday>.freeze, [">= 0.8.1"])
-      s.add_dependency(%q<json>.freeze, [">= 1.7.0"])
+      s.add_dependency(%q<hashie>.freeze, ["~> 1.2"])
+      s.add_dependency(%q<faraday>.freeze, ["~> 0.8"])
+      s.add_dependency(%q<json>.freeze, ["~> 1.7"])
       s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
       s.add_dependency(%q<bundler>.freeze, ["~> 1.0"])
-      s.add_dependency(%q<jeweler>.freeze, ["~> 2.3.9"])
-      s.add_dependency(%q<minitest>.freeze, [">= 0"])
-      s.add_dependency(%q<mocha>.freeze, [">= 0"])
+      s.add_dependency(%q<jeweler>.freeze, ["~> 2.3"])
+      s.add_dependency(%q<minitest>.freeze, ["~> 5.0"])
+      s.add_dependency(%q<mocha>.freeze, ["~> 1.0"])
     end
   else
-    s.add_dependency(%q<hashie>.freeze, [">= 1.2.0"])
-    s.add_dependency(%q<faraday>.freeze, [">= 0.8.1"])
-    s.add_dependency(%q<json>.freeze, [">= 1.7.0"])
+    s.add_dependency(%q<hashie>.freeze, ["~> 1.2"])
+    s.add_dependency(%q<faraday>.freeze, ["~> 0.8"])
+    s.add_dependency(%q<json>.freeze, ["~> 1.7"])
     s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
     s.add_dependency(%q<bundler>.freeze, ["~> 1.0"])
-    s.add_dependency(%q<jeweler>.freeze, ["~> 2.3.9"])
-    s.add_dependency(%q<minitest>.freeze, [">= 0"])
-    s.add_dependency(%q<mocha>.freeze, [">= 0"])
+    s.add_dependency(%q<jeweler>.freeze, ["~> 2.3"])
+    s.add_dependency(%q<minitest>.freeze, ["~> 5.0"])
+    s.add_dependency(%q<mocha>.freeze, ["~> 1.0"])
   end
 end
 
